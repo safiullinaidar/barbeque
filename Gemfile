@@ -11,7 +11,7 @@ gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.3'
-gem 'russian'
+gem 'rails-i18n'
 gem 'sassc-rails'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
@@ -25,7 +25,6 @@ end
 
 group :development do
   gem 'web-console'
-
 end
 
 group :test do
