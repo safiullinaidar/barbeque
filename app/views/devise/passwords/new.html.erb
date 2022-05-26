@@ -1,6 +1,6 @@
 <div class="w-100 d-flex flex-column align-items-center">
   <div class="col-md-3 col-12">
-    <h2 class="my-4 display-6">Забыли пароль?</h2>
+    <h2 class="my-4 display-6"><%= t('password.forgot') %></h2>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
@@ -11,9 +11,9 @@
       </div>
 
       <div class="actions my-3">
-        <%= f.submit "Отправить дальнейшие инструкции", class: 'btn btn-outline-primary' %>
+        <%= f.submit t('password.reset_password_instructions'), class: 'btn btn-outline-primary' %>
       </div>
     <% end %>
-    <%= link_to "Назад", :back %>
+    <%= link_to t('app.back'), :back %>
   </div>
 </div>

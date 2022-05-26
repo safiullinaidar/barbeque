@@ -1,6 +1,6 @@
 <div class="w-100 d-flex flex-column align-items-center">
   <div class="col-md-3 col-12">
-    <h2 class="my-4 display-6">Вход</h2>
+    <h2 class="my-4 display-6"><%= t('app.entrance') %></h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
       
@@ -22,7 +22,7 @@
       <% end %>
 
       <div class="actions my-4">
-        <%= f.submit "Войти", class: 'btn btn-outline-primary' %>
+        <%= f.submit t('app.log_in'), class: 'btn btn-outline-primary' %>
       </div>
 
       <%= render "devise/shared/links" %>

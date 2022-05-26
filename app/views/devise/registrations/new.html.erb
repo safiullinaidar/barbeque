@@ -1,5 +1,5 @@
 <div class="w-100 d-flex flex-column align-items-center">
-  <h2 class="my-4 display-6">Регистрация</h2>
+  <h2 class="my-4 display-6"><%= t('password.registration') %></h2>
   
   <%= render partial: 'partials/registration', locals: {model: @user} %>
 
@@ -7,7 +7,7 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
       
       <div class="actions mt-3">
-        <%= f.submit "Зарегистрироваться", class: 'btn btn-outline-primary' %>
+        <%= f.submit t('app.sign_up'), class: 'btn btn-outline-primary' %>
       </div>
 
     <% end %>

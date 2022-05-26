@@ -1,7 +1,7 @@
 <div class="event">
   <div class="event-info row">
     <div class="col-md-12">
-      <%= image_tag "event_thumb.jpg", class: "event-background", alt: "Шашлыки"%>
+      <%= image_tag "event_thumb.jpg", class: "event-background" %>
 
       <div class="event-info-inner row">
         <div class="col-md-6">
@@ -15,7 +15,7 @@
 
           <% if current_user_can_edit?(@event) %>
           <div class="buffer-top">
-            <%= link_to 'Изменить', edit_event_path(@event),
+            <%= link_to t('event.update'), edit_event_path(@event),
               class: 'btn btn-primary' %>
           <% end %>
           </div>

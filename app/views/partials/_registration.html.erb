@@ -10,7 +10,7 @@
     <div class="field mb-4">
       <%= f.label :password, class: 'form-label' %>
       <%= f.password_field :password, autocomplete: "new-password", class: 'text-muted form-control',
-            placeholder: "Не менее #{@minimum_password_length} символов" %>
+            placeholder: t('password.length', number: @minimum_password_length) %>
     </div>
 
     <div class="field mb-4">
