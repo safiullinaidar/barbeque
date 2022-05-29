@@ -15,6 +15,12 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      comment:
+        user_name: 'Ваше имя'
+        body: 'Комментарий'
+      subscription:
+        user_name: 'Ваше имя'
+        user_email: 'Ваш Email'
 
   controllers:
     events:
@@ -43,6 +49,7 @@ ru:
     entrance: 'Вход'
     save: 'Сохранить'
     return: 'вернуться'
+    hello: 'Здравствуйте'
 
   form:
     has: 'В вашей форме'
@@ -61,7 +68,10 @@ ru:
     question: 'Вам не интересно?'
     registration: 'Регистрация'
     length: 'Не менее %{number} символов'
-    change: 'Сменить пароль'
+    change: 'Сменить мой пароль'
+    link_request: 'Кто-то запросил ссылку для смены Вашего пароля. Вы можете сделать это по ссылке ниже.'
+    ignore_email: 'Если это были не Вы, пожалуйста, проигнорируйте данное письмо.'
+    change_terms: 'Ваш пароль не будет изменён до тех пор, пока Вы не пройдёте по ссылке выше и не создадите новый пароль.'
 
   alert:
     are_you_sure: 'Вы уверены?'
@@ -83,8 +93,15 @@ ru:
   comments:
     comment:
       destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+    send: 'Отправить'
+    delete: 'Удалить комментарий'
 
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+    calls: 'Зовет:'
+    who_goes: 'Пойдут:'
+    i_will_go: 'Я пойду:'
+    delete: 'Удалить подписку'
+    submit: 'Подписаться'
   
