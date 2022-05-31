@@ -5,11 +5,16 @@ class SubscriptionsController < ApplicationController
   def create
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
+    refusal_message = { alert: I18n.t('controllers.subscriptions.error') }
 
-    if @new_subscription.save
-      redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
+    if @event.user != current_user
+      if @new_subscription.save
+        redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
+      else
+        redirect_to @event, refusal_message
+      end
     else
-      render 'events/show', alert: I18n.t('controllers.subscriptions.error')
+      redirect_to @event, refusal_message
     end
   end
 
