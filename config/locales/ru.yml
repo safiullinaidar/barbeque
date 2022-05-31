@@ -3,6 +3,12 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              own_event: 'не может использоваться для подписки на это событие'
     
     attributes:
       user:
