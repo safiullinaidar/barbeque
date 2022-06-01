@@ -11,6 +11,7 @@ class Subscription < ApplicationRecord
     validates :user_name, presence: true
     validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/,
               uniqueness: { scope: :event_id }
+    validate :user_already_exists
   end
 
   def user_name
@@ -25,5 +26,9 @@ class Subscription < ApplicationRecord
 
   def avoid_subscription_to_own_event
     errors.add(:user_email, :own_event) if user == event.user
+  end
+
+  def user_already_exists
+    errors.add(:user_email, :can_not_use) if User.exists?(email: user_email)
   end
 end

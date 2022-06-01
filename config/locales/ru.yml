@@ -9,6 +9,7 @@ ru:
           attributes:
             user_email:
               own_event: 'не может использоваться для подписки на это событие'
+              can_not_use: 'уже используется другим пользователем'
     
     attributes:
       user:
