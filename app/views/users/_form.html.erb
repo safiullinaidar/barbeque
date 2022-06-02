@@ -6,9 +6,15 @@
     <%= f.text_field :name, class: 'text-muted form-control' %>
   </div>
 
-  <div class="ffield mb-3">
+  <div class="field mb-3">
     <%= f.label :email, class: 'form-label' %>
     <%= f.text_field :email, class: 'text-muted form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
+    <%= f.file_field :avatar %>
   </div>
 
   <div class="actions my-4">
