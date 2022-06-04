@@ -5,13 +5,15 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :subscriptions, dependent: :destroy
 
-  validates :name, presence: true, length: { maximum: 35 }
+  has_one_attached :avatar do |attachable|
+    attachable.variant :thumb, resize_to_fill: [100, 100]
+  end
 
+  validates :name, presence: true, length: { maximum: 35 }
+  
   after_commit :link_subscriptions, on: :create
 
   before_validation :set_name, on: :create
-
-  mount_uploader :avatar, AvatarUploader
 
   private
 
