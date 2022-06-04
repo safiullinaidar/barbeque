@@ -3,11 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
+gem 'aws-sdk-s3'
 gem 'bootsnap', require: false
 gem 'carrierwave'
 gem 'cssbundling-rails'
 gem 'devise'
 gem 'devise-i18n'
+gem "image_processing", ">= 1.2"
 gem 'jsbundling-rails'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.3'
