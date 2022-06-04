@@ -1,0 +1,14 @@
+<%= form_with model: [@event, photo], html: { multipart: true }, data: { turbo: false } do |f| %>
+  <%= render partial: 'partials/form_errors', locals: {model: photo} %>
+
+  <% if user_signed_in? %>
+    <div class="form-group mb-3">
+      <%= f.label :photo %>
+      <%= f.file_field :photo, class: 'form-control' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Загрузить', class: 'btn btn-outline-primary' %>
+    </div>
+  <% end %>
+<% end %>

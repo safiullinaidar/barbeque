@@ -1,0 +1,9 @@
+<div class="event-photo buffer-both">
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+
+  <%= t('photos.uploaded') %> <%= render partial: 'users/user', object: photo.user %>
+  <% if current_user_can_edit?(photo) %>
+        <%= button_to '❌', event_photo_path(photo.event, photo), method: :delete,
+                      form: { data: { turbo_confirm: t('.destroy_confirm') } }, title: t('photos.delete'), class: 'btn btn-outline' %>
+      <% end %>
+</div>

@@ -1,7 +1,8 @@
 <div class="event">
   <div class="event-info row">
     <div class="col-md-12">
-      <%= image_tag "event_thumb.jpg", class: "event-background" %>
+      <%= content_tag 'div', '', class: 'event-background',
+                      style: "background-image: url(#{event_photo(@event)})" %>
 
       <div class="event-info-inner row">
         <div class="col-md-6">
@@ -32,6 +33,17 @@
 
   <div class="row">
     <div class="col-md-8">
+
+      <div class="event-photos">
+        <div class="event-photos-gallery">
+          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+        </div>
+
+        <div class="event-photo-form">
+          <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+        </div>
+      </div>
+
       <div class="event-comments buffer-top">
         <%= render partial: 'comments/form',
           locals: {comment: @new_comment || @event.comments.build} %>
@@ -40,6 +52,7 @@
             collection: @event.comments.except(@new_comment) %>
         </div>
       </div>
+
     </div>
 
     <div class="col-md-4">

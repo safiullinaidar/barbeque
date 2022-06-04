@@ -22,6 +22,10 @@
   border-radius: 50%;
 }
 
+.img-lg {
+  border-radius: 50%;
+}
+
 .thumbnail {
   position: relative;
   background: transparent;
