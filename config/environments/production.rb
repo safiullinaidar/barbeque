@@ -63,6 +63,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "bbq_production"
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.delivery_method = :mailjet
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -91,5 +92,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # config.action_mailer.default_url_options = { host: 'heroku' }
+  config.action_mailer.default_url_options = { host: 'shashlykmashlyk.herokuapp.com' }
 end
