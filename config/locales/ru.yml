@@ -145,3 +145,10 @@ ru:
       datetime: 'Состоится'
       owner: 'Организатор'
       subject: "Новая подписка на %{event}"
+    photo:
+      title: 'Новое фото'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+      subject: 'Новое фото у %{event}'
