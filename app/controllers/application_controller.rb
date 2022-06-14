@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_can_edit?
 
+  protect_from_forgery with: :exception
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(
       :account_update,
