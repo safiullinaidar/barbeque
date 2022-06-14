@@ -3,5 +3,5 @@
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to t('password.forgot'), new_password_path(resource_name) %>
+  <%= button_to t('password.forgot'), new_password_path(resource_name), class: 'btn btn-outline-primary mb-2' %>
 <% end %>
