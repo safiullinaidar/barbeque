@@ -13,10 +13,10 @@
       <div class="actions my-3">
         <%= f.submit t('password.reset_password_instructions'), class: 'btn btn-outline-primary' %>
       </div>
+
+      <%= render "devise/shared/links" %>
     <% end %>
     
     <%= link_to t('app.back'), :back %>
-
-    <%= render "devise/shared/links" %>
   </div>
 </div>
