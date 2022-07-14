@@ -1,24 +1,35 @@
-# README
+# "Шашлыки"
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение для создания событий (например, похода с друзьями на шашлыки).
+События могут создавать зарегистрированные пользователи. На событие можно подписаться 
+(как авторизованному пользователю, так и анонимному), оставить комментарий, добавить фотографии.
 
-Things you may want to cover:
+Приложение написано на `Ruby 3.0.0` и `Rails 7.0.2`.
 
-* Ruby version
+## Применённые технологии
 
-* System dependencies
+* Аутентификация с помощью гема Devise
+* Локализация с помощью i18n
+* Загрузка аватаров и фоток через Active Storage и Yandex Cloud
+* Стили Bootstrap 5
+* Для отправки писем используется Mailjet
 
-* Configuration
+## Запуск
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Для использования приложения необходимо установить версии используемых библиотек, зафиксированные в Gemfile, при помощи команды:
+```
+bundle
+```
+Далее необходимо прогнать миграции:
+```
+bundle exec rails db:migrate
+```
+Для запуска локально необходимо запустить сервер
+```
+$ rails s
+```
+и в браузере набрать
+```
+http://localhost:3000/
+```
+Сслыка для запуска приложения на Heroku прикреплена в описании.
