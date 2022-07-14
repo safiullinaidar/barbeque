@@ -12,6 +12,7 @@ gem 'devise-i18n'
 gem 'dotenv-rails'
 gem "image_processing", ">= 1.2"
 gem 'jsbundling-rails'
+gem 'letter_opener', group: :development
 gem 'mailjet'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.3'

@@ -28,7 +28,7 @@
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
-
+/tmp/letter_opener/*
 /public/assets
 
 # Ignore master key for decrypting credentials and more.
