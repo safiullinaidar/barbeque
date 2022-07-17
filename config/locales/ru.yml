@@ -70,6 +70,7 @@ ru:
     return: 'вернуться'
     hello: 'Здравствуйте'
     root_path: 'На главную'
+    confirmation_instructions: 'Не получили инструкции для подтверждению аккаунта?'
 
   form:
     has: 'В вашей форме'

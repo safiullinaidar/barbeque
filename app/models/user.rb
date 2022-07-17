@@ -10,10 +10,10 @@ class User < ApplicationRecord
   end
 
   validates :name, presence: true, length: { maximum: 35 }
-  
-  after_commit :link_subscriptions, on: :create
 
   before_validation :set_name, on: :create
+
+  after_commit :link_subscriptions, on: :create
 
   private
 
