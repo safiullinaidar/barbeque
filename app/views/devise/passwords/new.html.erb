@@ -2,7 +2,7 @@
   <div class="col-md-3 col-12">
     <h2 class="my-4 display-6"><%= t('password.forgot') %></h2>
 
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, data: { turbo: false } }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field mb-4">
