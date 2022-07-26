@@ -34,7 +34,7 @@ ru:
         user_name: 'Ваше имя'
         user_email: 'Ваш Email'
       photo:
-        photo: 'Фотография'
+        photo: 'Фото'
 
   controllers:
     events:
